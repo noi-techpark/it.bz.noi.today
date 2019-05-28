@@ -1,5 +1,6 @@
 <!doctype html>
 <html ng-app="noiDisplay" ng-controller="BusStopCtrl" ng-class="{s4boht:foyer}" lang="en">
+<div id="bello"></div>
 <head>
 	<meta charset="utf-8"/>
 	<title>NOI Today</title>
@@ -23,4 +24,7 @@
 		<a href="https://noi.bz.it" target="_blank" class="pull-right">noi.bz.it</a>
 	</footer>
 </body>
+<script>
+	document.getElementById("bello").innerHTML ="App:"+navigator.appName+"<br/> code: "+navigator.appCodeName+"<br/> platform"+navigator.platform +"<br/> userAgent:"+navigator.userAgent;	
+</script>
 </html>
