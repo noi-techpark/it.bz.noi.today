@@ -130,8 +130,8 @@ noiDisplay.directive('eventDisplay',function($interval){
 
 noiDisplay.controller('BusStopCtrl', function BusStopCtrl($scope,$interval,$http,$sce,$location) {
 	var self= $scope;
-	const eventsTill = 14*24*60*60*1000;
-	const updateIntervall = 30000;
+	var eventsTill = 14*24*60*60*1000;
+	var updateIntervall = 30000;
 	self.init = function(){
 		$scope.foyer = ($location.search().location ==="foyer")
 		fetchData().then(function(data){
@@ -155,7 +155,7 @@ noiDisplay.controller('BusStopCtrl', function BusStopCtrl($scope,$interval,$http
 		return new Promise(
 			function(resolve,reject){
 				var defaultStartDate = new Date().getTime();
-				const params = {
+				var params = {
 					startdate:defaultStartDate,
 					enddate: defaultStartDate + eventsTill,
 					eventlocation: 'NOI',
