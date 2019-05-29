@@ -109,7 +109,7 @@ noiDisplay.directive('eventDisplay',function($interval){
 			if (angular.isDefined(self.loopLanguages))
 				$interval.cancel(self.loopLanguages);
 			self.loopLanguages = $interval(function(){
-				if (self.lang){
+				if (self.lang && languages){
 					var current = languages.indexOf(self.lang) | 0;
 					if (current == undefined || current == languages.length-1)
 						current = 0;
