@@ -109,13 +109,15 @@ noiDisplay.directive('eventDisplay',function($interval){
 			if (angular.isDefined(self.loopLanguages))
 				$interval.cancel(self.loopLanguages);
 			self.loopLanguages = $interval(function(){
-				var current = languages.indexOf(self.lang) | 0;
-				if (current == undefined || current == languages.length-1)
-					current = 0;
-				else {
-						current++;
+				if (self.lang){
+					var current = languages.indexOf(self.lang) | 0;
+					if (current == undefined || current == languages.length-1)
+						current = 0;
+					else {
+							current++;
+					}
+					self.lang = languages[current];
 				}
-				self.lang = languages[current];
 			},10000);
 			elaborateData(value);
 		});
