@@ -1,7 +1,7 @@
-NOI-display
+today-noi-bz-it
 =============
 
-is a simple website which displays the events happening at the NOI Techpark in Bolzano/Bozen.
+is a simple website which displays the events happening at the NOI Techpark in Bolzano/Bozen on https://today.noi.bz.it
 
 Technologies used:
 ---------------------
