@@ -159,7 +159,7 @@ noiDisplay.controller('BusStopCtrl', function BusStopCtrl($scope,$interval,$http
 				var defaultStartDate = new Date().getTime();
 				var params = {
 					startdate:defaultStartDate,
-					enddate: defaultStartDate + eventsTill,
+					//enddate: defaultStartDate + eventsTill,       //uncomment if you want to limit results in the future
 					eventlocation: 'NOI',
 					datetimeformat:'uxtimestamp',
 					onlyactive: true
