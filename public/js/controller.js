@@ -136,6 +136,11 @@ noiDisplay.controller('BusStopCtrl', function BusStopCtrl($scope,$interval,$http
 	var updateIntervall = 30000;
 	self.init = function(){
 		$scope.foyer = ($location.search().location ==="foyer")
+        try{
+            $scope.fullFilter = (JSON.parse($location.search().ofs));
+        }catch(err){
+            console.error(err);
+        }
 		fetchData().then(function(data){
 			self.data = data;
 		}).catch(function(error){
