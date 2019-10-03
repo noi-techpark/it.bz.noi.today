@@ -141,7 +141,9 @@ noiDisplay.controller('BusStopCtrl', function BusStopCtrl($scope,$interval,$http
         }catch(err){
             console.error(err);
         }
-        $scope.pathFilter = $location.hash();
+        $scope.$on('$locationChangeSuccess', function(event){
+            $scope.pathFilter = $location.hash();
+        });
 		fetchData().then(function(data){
 			self.data = data;
 		}).catch(function(error){
