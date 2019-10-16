@@ -243,6 +243,9 @@ svg text tspan{
 	font-weight: bold;
 	max-width: 50%;
 }
+.location a {
+    color : #fff;
+}
 header{
 	display: flex;
 	justify-content: space-between;
