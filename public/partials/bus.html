@@ -30,7 +30,7 @@
 						</div>
 						<div class="col-sm-5 col-xs-12 col-lg-5 col-lg-offset-0 col-md-5" style="justify-content:flex-end">
 							<div class="location" ng-class="{s4location:foyer}" >
-								<span ng-repeat="space in ride.SpaceDescList"><span ng-show="$index <3 && $index > 0">, </span><span ng-show="$index<3 ">{{space}}</span><span ng-show="$index == 3"> ...</span></span>
+								<span ng-repeat="space in ride.SpaceDescList"><span ng-show="$index <3 && $index > 0">, </span><span ng-show="$index<3 && !roomMapping[space]">{{space}}</span><a ng-show ="$index<3 && roomMapping[space]" ng-href="{{roomMapping[space]}}&lang={{lang}}" target="_blank" >{{space}}</a><span ng-show="$index == 3"> ...</span></span>
 							</div>
 							<div class="starts-in" ng-class="{'s4starts-in':foyer}">
 								<div><small  ng-bind-html="ride.time"></small></div>
