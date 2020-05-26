@@ -75,6 +75,9 @@ h2 small{
 	display:block;
 	height:17vh;
 }
+.line.d1{
+    height:15vh;    
+}
 .line>div{
 	    height: 100%;
 			display: flex;
@@ -387,4 +390,7 @@ header{
 h1.title{
 	padding:5px;
 	font-size:7em;
+}
+h1.title.d1{
+    font-size:4em;
 }
