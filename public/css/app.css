@@ -23,6 +23,9 @@ body,html{
   min-height: 100vh;
 	padding-bottom:20px;
 }
+body.d1{
+    overflow:hidden;
+}
 strong{
 	font-weight: 600;
 }
@@ -76,7 +79,10 @@ h2 small{
 	height:17vh;
 }
 .line.d1{
-    height:15vh;    
+    height:13vh;    
+}
+.s4big-screen-header.d1{
+    height:14vh;
 }
 .line>div{
 	    height: 100%;
@@ -386,6 +392,9 @@ header{
 	margin-top: 0.5vh;
 	margin-bottom:1vh;
 	
+}
+.starts-in.d1 small{
+    font-size:0.6em;
 }
 h1.title{
 	padding:5px;

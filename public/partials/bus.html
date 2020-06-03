@@ -5,17 +5,17 @@
 			<a href="https://noi.bz.it" target="_blank" aria-label="noi-logo"><img  src="img/noi-logo.png" class="noi-logo" alt="noi-logo"/></a>
 		</header>
 		<div class="slideshow-container" ng-class="{'s4slideshow-container':foyer||d1}">
-			<div ng-show="foyer||d1" ng-class="{'s4big-screen-header':foyer||d1}">
+			<div ng-show="foyer||d1" ng-class="{'s4big-screen-header':foyer||d1,'d1':d1}">
 				<h1 class="title" ng-class="{'d1':d1}"><strong>TODAY</strong>.NOI.BZ.IT</h1>
 				<div>
 					<div my-clock="HH:mm" class="clock" ng-class="{s4clock:foyer||d1}"><!----></div>
-					<small my-clock="dd MMM yy" class="clock day" ng-class="{s4clock:foyer||d1}"><!----></small>
+					<small my-clock="dd MMM yy" class="clock day" ng-class="{s4clock:foyer||d1,'d1':d1}"><!----></small>
 				</div>
 			</div>
 			<div ng-show="warning">Site under mantainance!!!</div>
 			<div class="content container-fluid">
-				<div class="lines" ng-class="{'d1':d1}">
-					<div ng-repeat="ride in rides | orderBy:'from'|filter:fullFilter|filter:{CompanyName:pathFilter}" class="row line" ng-class="{s4line:foyer}">
+				<div class="lines">
+					<div ng-repeat="ride in rides | orderBy:'from'|filter:fullFilter|filter:{CompanyName:pathFilter}" class="row line" ng-class="{s4line:foyer,'d1':d1}">
 						<div class="col-sm-7 col-xs-12 description col-lg-7 col-md-7" >
 							<h2>
 								<a ng-show="ride.EventWebAddress" href="{{ride.EventWebAddress}}" target="_blank">
@@ -32,7 +32,7 @@
 							<div class="location" ng-class="{s4location:foyer}" >
 								<span ng-repeat="space in ride.SpaceDescList"><span ng-show="$index <3 && $index > 0">, </span><span ng-show="$index<3 && !roomMapping[space]">{{space}}</span><a ng-show ="$index<3 && roomMapping[space]" ng-href="{{roomMapping[space]}}&lang={{lang}}" target="_blank" >{{space}}</a><span ng-show="$index == 3"> ...</span></span>
 							</div>
-							<div class="starts-in" ng-class="{'s4starts-in':foyer||d1}">
+							<div class="starts-in" ng-class="{'s4starts-in':foyer||d1,'d1':d1}">
 								<div><small  ng-bind-html="ride.time"></small></div>
 							</div>
 						</div>
