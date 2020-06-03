@@ -245,9 +245,9 @@ svg text tspan{
 	text-align:left;
 }
 .d1 .location{
-    padding-top:17px;
-    padding-bottom:17px;
-    font-size: 2em;
+    padding-top:12px;
+    padding-bottom:12px;
+    font-size: 1.8em;
 }
 .location{
 	color : #fff;
