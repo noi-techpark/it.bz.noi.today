@@ -122,11 +122,12 @@ noiDisplay.directive('eventDisplay',function($interval){
 			elaborateData(value);
 		});
         self.customFieldsFilter = function(value,index,array){
-            return value['TechnologyFields'].reduce((result,value) =>{
+            return self.fields ?
+            value['TechnologyFields'].reduce((result,value) =>{
                 if (self.fields.includes(value.toLowerCase()))
                     return true;
                 }
-            ,false);
+            ,false):true;
         }
 	}
 	return{
