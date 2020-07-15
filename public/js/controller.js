@@ -121,6 +121,13 @@ noiDisplay.directive('eventDisplay',function($interval){
 			},10000);
 			elaborateData(value);
 		});
+        self.customFieldsFilter = function(value,index,array){
+            return value['TechnologyFields'].reduce((result,value) =>{
+                if (self.fields.includes(value.toLowerCase()))
+                    return true;
+                }
+            ,false);
+        }
 	}
 	return{
 		link:link,
@@ -137,6 +144,7 @@ noiDisplay.controller('BusStopCtrl', function BusStopCtrl($scope,$interval,$http
 	self.init = function(){
 		$scope.foyer = ($location.search().location ==="foyer");
         $scope.d1= ($location.search().location ==="D1");
+        $scope.fields= ($location.search().fields?$location.search().fields.split(','):undefined);
 
         try{
             $scope.fullFilter = (JSON.parse($location.search().ofs));

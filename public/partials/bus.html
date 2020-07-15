@@ -15,7 +15,7 @@
 			<div ng-show="warning">Site under mantainance!!!</div>
 			<div class="content container-fluid">
 				<div class="lines">
-					<div ng-repeat="ride in rides | orderBy:'from'|filter:fullFilter|filter:{CompanyName:pathFilter}" class="row line" ng-class="{s4line:foyer,'d1':d1}">
+					<div ng-repeat="ride in rides | orderBy:'from' | filter:fullFilter | filter:{CompanyName:pathFilter} | filter:customFieldsFilter" class="row line" ng-class="{s4line:foyer,'d1':d1}">
 						<div class="col-sm-7 col-xs-12 description col-lg-7 col-md-7" >
 							<h2>
 								<a ng-show="ride.EventWebAddress" href="{{ride.EventWebAddress}}" target="_blank">
