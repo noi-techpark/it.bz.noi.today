@@ -10,6 +10,7 @@
 	<script src="https://code.angularjs.org/1.7.8/angular-animate.min.js" type="text/javascript"><!-- --></script>
 	<script src="https://code.angularjs.org/1.7.8/angular-sanitize.min.js" type="text/javascript"><!-- --></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js" type="text/javascript"><!-- --></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="js/controller.js" type="text/javascript"><!-- --></script>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/app.css">
@@ -20,8 +21,31 @@
 <body  ng-init="init()" ng-class="{s4boht:foyer,d1:d1}">
 	<div event-display="data"></div>
 	<footer ng-hide="foyer||d1">
-		<span class="pull-left">Service provided by NOI-AG</span>
-		<a href="https://noi.bz.it" target="_blank" class="pull-right">noi.bz.it</a>
+		<span class="pull-left">Service provided by <a href="https://noi.bz.it" target="_blank" title="noi.bz.it">NOI-AG</a></span>
+        <a class ="pull-right btn btn-primary btn-xs"  data-toggle="modal" data-target="#advanced-features">Advanced features</a>
 	</footer>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="advanced-features" style="text-align:left">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title">Advanced Features</h3>
+                </div>
+                <div class="modal-body">
+                    <h4>Filters</h4>
+                    <p>2 different kind of filters can be used, just by changing the url slightly:</p>
+                    <ol>
+                        <li><a href="https://today.noi.bz.it#NOI" target="_blank">https://today.noi.bz.it#NOI</a> to filter by organizer (the one under the event title), use '#' in the url</li>
+                        <li><a href="https://today.noi.bz.it?fields=digital" target="_blank">https://today.noi.bz.it?fields=digital</a> to filter by technology fields of the event, add the request paramter '?fields=&lt;technology field&gt;' to the url. You can also add multiple techology fields using ',' as a seperator </li>
+                        <li><a href="https://today.noi.bz.it/?ofs={%22EventDescriptionEN%22:%22AlpineBits%22}">https://today.noi.bz.it/?ofs={%22EventDescriptionEN%22:%22AlpineBits%22}</a> advanced filter method to filter on any given json field(only for people who have some background)</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
