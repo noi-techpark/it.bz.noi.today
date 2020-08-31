@@ -155,12 +155,12 @@ noiDisplay.controller('BusStopCtrl', function BusStopCtrl($scope,$interval,$http
         $scope.$on('$locationChangeSuccess', function(event){
             $scope.pathFilter = $location.hash();
         });
-		fetchRoomMapping().then(function(data){
-            self.roomMapping= data;
-        }).then(fetchData).then(function(data){
-			self.data = data;
+		fetchData().then(function(data){
+            self.data= data;
+        }).then(fetchRoomMapping).then(function(data){
+			self.roomMapping = data;
 		}).catch(function(error){
-			self.warning = true;
+            self.roomMapping= {};
 			console.error("unable to retrieve data:" + error);
 		});
 
@@ -176,6 +176,7 @@ noiDisplay.controller('BusStopCtrl', function BusStopCtrl($scope,$interval,$http
             fetchRoomMapping().then(function(data){
                 self.roomMapping = data;
             }).catch(function(error){
+                self.roomMapping= {};
                 console.error("unable to get categories");
             });
         },3600000);
@@ -185,14 +186,16 @@ noiDisplay.controller('BusStopCtrl', function BusStopCtrl($scope,$interval,$http
 		return new Promise(
 			function(resolve,reject){
 				var defaultStartDate = new Date().getTime();
-				$http.get("https://tourism.opendatahub.bz.it/api/EventShort/RoomMapping").then(function(response,error) {
+				$http.get("https://tourism.opendatahub.bz.it/api/EventShort/RoomMapping").then(function successH(response) {
 					var data = response.data;
 					if (response.status != 200 || data == null || data.length===0){
-						reject(error);
+						reject("No data inside");
 					}else{
 						resolve(data);
 					}
-				});
+				},function errorH(error){
+                    reject(error);
+                });
 			});
 	}
 	var fetchData = function (){
