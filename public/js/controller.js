@@ -211,7 +211,7 @@ noiDisplay.controller('BusStopCtrl', function BusStopCtrl($scope,$interval,$http
 				}
 				$http.get("https://tourism.opendatahub.bz.it/api/EventShort/GetbyRoomBooked?"+$.param(params)).then(function(response,error) {
 					var data = response.data;
-					if (response.status != 200 || data == null || data.length===0){
+					if (response.status != 200 || data == null){
 						reject(error);
 					}else{
 						resolve(data);

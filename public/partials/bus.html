@@ -12,7 +12,7 @@
 					<small my-clock="dd MMM yy" class="clock day" ng-class="{s4clock:foyer||d1,'d1':d1}"><!----></small>
 				</div>
 			</div>
-			<div ng-show="warning">Site under mantainance!!!</div>
+			<div ng-show="warning">Site under maintenance!!!</div>
 			<div class="content container-fluid">
 				<div class="lines">
 					<div ng-repeat="ride in rides | orderBy:'from' | filter:fullFilter | filter:{CompanyName:pathFilter} | filter:customFieldsFilter" class="row line" ng-class="{s4line:foyer,'d1':d1}">
