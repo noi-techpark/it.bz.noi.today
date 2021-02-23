@@ -57,7 +57,6 @@ noiDisplay.directive('eventDisplay',function($interval){
                         }
 
 			for(i in departedRides){
-				if (self.rides[departedRides[i]].RoomEndDateUTC < new Date().getTime())
 				self.rides.splice(departedRides[i],1);
 			}
 			syncExisting(self.rides, data);
