@@ -3,7 +3,6 @@
 	padding: 20px;
 	background-color: #000;
 	height: 84vh;
-	height:-webkit-fill-available;
 }
 .noi-logo{
 	width:300px;
@@ -316,7 +315,6 @@ header{
   }
   .slideshow-container{
     height:max-content;
-	height:-webkit-fill-available;
   }
   footer{
     display:none;
@@ -345,7 +343,6 @@ header{
 	}
 	.slideshow-container{
 		height:max-content;
-		height:-webkit-fill-available;
 	}
 }
 
@@ -399,7 +396,6 @@ header{
 .s4slideshow-container{
 	padding:0 20px;
 	height:100vh;
-	height:-webkit-fill-available;
 }
 .s4starts-in{
 	font-size: 2.7em;
