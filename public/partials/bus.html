@@ -2,11 +2,11 @@
 			<h1>
 				<strong>TODAY</strong>.NOI.BZ.IT
 			</h1>
-			<a href="https://noi.bz.it" target="_blank" aria-label="noi-logo"><img  src="img/noi-logo.png" class="noi-logo" alt="noi-logo"/></a>
+			<a href="https://noi.bz.it" target="_blank" aria-label="noi-logo"><img  src="img/noi-black.svg" class="noi-logo" alt="noi-logo"/></a>
 		</header>
 		<div class="slideshow-container" ng-class="{'s4slideshow-container':foyer||d1}">
 			<div ng-show="foyer||d1" ng-class="{'s4big-screen-header':foyer||d1,'d1':d1}">
-				<h1 class="title" ng-class="{'d1':d1}"><strong>TODAY</strong>.NOI.BZ.IT</h1>
+				<h1 class="title" ng-class="{'d1':d1,'foyer':foyer}"><strong>TODAY</strong>.NOI.BZ.IT</h1>
 				<div>
 					<div my-clock="HH:mm" class="clock" ng-class="{s4clock:foyer||d1}"><!----></div>
 					<small my-clock="dd MMM yy" class="clock day" ng-class="{s4clock:foyer||d1,'d1':d1}"><!----></small>
@@ -19,7 +19,7 @@
 						<div class="col-sm-7 col-xs-12 description col-lg-7 col-md-7" >
 							<h2>
 								<a ng-show="ride.EventWebAddress" href="{{ride.EventWebAddress}}" target="_blank">
-									{{!!ride.EventDescription[lang]?ride.EventDescription[lang]:ride.EventDescription['en']}}
+									<strong>{{!!ride.EventDescription[lang]?ride.EventDescription[lang]:ride.EventDescription['en']}}</strong>
 								</a>
 								<strong ng-show="!ride.EventWebAddress">
 									{{!!ride.EventDescription[lang]?ride.EventDescription[lang]:ride.EventDescription['en']}}
