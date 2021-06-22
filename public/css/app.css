@@ -2,7 +2,7 @@
 	position:relative;
 	padding: 20px;
 	background-color: #000;
-	height: 84vh;
+	min-height: 84vh;
 }
 .noi-logo{
 	width:300px;
@@ -395,7 +395,7 @@ header{
 }
 .s4slideshow-container{
 	padding:0 20px;
-	height:100vh;
+	min-height:100vh;
 }
 .s4starts-in{
 	font-size: 2.7em;
@@ -426,4 +426,5 @@ h1.title.foyer,h1.title.d1{
 }
 a,a:hover,a:active,a:focus{
 	color: #000;
+	text-decoration: underline;
 }

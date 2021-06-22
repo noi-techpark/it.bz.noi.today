@@ -155,7 +155,7 @@ noiDisplay.controller('BusStopCtrl', function BusStopCtrl($scope,$interval,$http
             $scope.pathFilter = $location.hash();
         });
 		fetchData().then(function(data){
-            self.data= data.slice(0,3);
+            self.data= data;
         }).then(fetchRoomMapping).then(function(data){
 			self.roomMapping = data;
 		}).catch(function(error){
@@ -165,7 +165,7 @@ noiDisplay.controller('BusStopCtrl', function BusStopCtrl($scope,$interval,$http
 
 		$interval(function(){
 			fetchData().then(function(data){
-				self.data = data.slice(0,3);
+				self.data = data;
 			}).catch(function(error){
 				self.warning = true;
 				console.error("unable to retrieve data:" + error);
