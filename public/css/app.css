@@ -2,11 +2,10 @@
 	position:relative;
 	padding: 20px;
 	background-color: #000;
-	min-height: 84vh;
+	min-height: 85vh;
 }
 .noi-logo{
-	width:300px;
-	padding:30px;
+	width:275px;
 }
 .content{
 	padding:0;
