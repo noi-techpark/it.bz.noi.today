@@ -1,7 +1,7 @@
 today-noi-bz-it
 =============
 
-[![CI](https://github.com/noi-techpark/today-noi-bz-it/actions/workflows/ci.yml/badge.svg)](https://github.com/noi-techpark/today-noi-bz-it/actions/workflows/ci.yml)
+[![CI/CD](https://github.com/noi-techpark/it.bz.noi.today/actions/workflows/main.yml/badge.svg)](https://github.com/noi-techpark/it.bz.noi.today/actions/workflows/main.yml)
 
 is a simple website which displays the events taking place at the NOI Techpark in Bolzano/Bozen on https://today.noi.bz.it
 
