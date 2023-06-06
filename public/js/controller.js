@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: NOI Techpark <digital@noi.bz.it>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 var noiDisplay = angular.module('noiDisplay', ['ngSanitize']);
 noiDisplay.config(function($locationProvider) {
 	$locationProvider.html5Mode({

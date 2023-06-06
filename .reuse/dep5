@@ -1,0 +1,32 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: it.bz.noi.today
+Upstream-Contact: NOI Techpark <digital@noi.bz.it>
+Source: https://github.com/noi-techpark/it.bz.noi.today
+
+Files: .github/* .gitignore LICENSE.md public/fonts/source-sans-pro/* public/img/*
+Copyright: (c) NOI Techpark <digital@noi.bz.it>
+License: CC0-1.0
+
+Files: public/css/cookieconsent.css
+Copyright: (c) 2020-2023 Orest Bida
+License: MIT
+
+Files: public/css/bootstrap.min.css
+Copyright: (c) 2011-2014 Twitter, Inc.
+License: MIT
+
+Files: public/js/angular-animate.min.js public/js/angular-route.min.js public/js/angular-sanitize.min.js public/js/angular.min.js public/js/cookieconsent.js
+Copyright: (c) 2010-2014 Google, Inc.
+License: MIT
+
+Files: public/js/jquery.js
+Copyright: (c) 2005, 2013 jQuery Foundation, Inc.
+License: MIT
+
+Files: public/js/angular-moment.min.js
+Copyright: (c) 2013-2016 Uri Shaked and contributors
+License: MIT
+
+Files: public/js/moment-with-locales.min.js
+Copyright: (c) JS Foundation and other contributors
+License: MIT
