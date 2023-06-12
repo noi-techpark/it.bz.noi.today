@@ -3,7 +3,7 @@ Upstream-Name: it.bz.noi.today
 Upstream-Contact: NOI Techpark <digital@noi.bz.it>
 Source: https://github.com/noi-techpark/it.bz.noi.today
 
-Files: .github/* .gitignore LICENSE.md public/fonts/source-sans-pro/* public/img/*
+Files: .github/* .gitignore .pre-commit-config.yaml LICENSE.md public/fonts/source-sans-pro/* public/img/*
 Copyright: (c) NOI Techpark <digital@noi.bz.it>
 License: CC0-1.0
 
