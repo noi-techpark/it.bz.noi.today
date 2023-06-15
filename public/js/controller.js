@@ -189,7 +189,7 @@ noiDisplay.controller('BusStopCtrl', function BusStopCtrl($scope,$interval,$http
 		return new Promise(
 			function(resolve,reject){
 				var defaultStartDate = new Date().getTime();
-				$http.get("https://tourism.opendatahub.bz.it/api/EventShort/RoomMapping").then(function successH(response) {
+				$http.get("https://tourism.opendatahub.com/api/EventShort/RoomMapping").then(function successH(response) {
 					var data = response.data;
 					if (response.status != 200 || data == null || data.length===0){
 						reject("No data inside");
@@ -212,7 +212,7 @@ noiDisplay.controller('BusStopCtrl', function BusStopCtrl($scope,$interval,$http
 					datetimeformat:'uxtimestamp',
 					onlyactive: true
 				}
-				$http.get("https://tourism.opendatahub.bz.it/api/EventShort/GetbyRoomBooked?"+$.param(params)).then(function(response,error) {
+				$http.get("https://tourism.opendatahub.com/api/EventShort/GetbyRoomBooked?"+$.param(params)).then(function(response,error) {
 					var data = response.data;
 					if (response.status != 200 || data == null){
 						reject(error);
