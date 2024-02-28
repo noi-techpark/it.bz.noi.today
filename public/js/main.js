@@ -1,3 +1,9 @@
+/*
+ * SPDX-FileCopyrightText: NOI Techpark <digital@noi.bz.it>
+ *
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
 window.onload = function () {
     // locations where footer will be hidden
     const locations = ['foyer', 'd1', 'd6']
